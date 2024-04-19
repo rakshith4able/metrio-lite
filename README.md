@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# Metrio LITE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Metrio LITE is a web application designed for filling out forms to potentially generate environmental indicators. This project aims to provide a user-friendly interface for managing environmental data efficiently.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Form Management**: Visualize, create, edit, and delete forms.
+- **Data Entry**: View and manage data entries associated with each form.
+- **Responsive Design**: Ensures adaptability across desktop computers and mobile phones.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
+- TypeScript
+- Redux Toolkit (for state management)
+- React Router (for navigation)
+- MUI (for UI components)
+- Framer Motion (for animations)
+- Axios (for handling HTTP requests)
+- JSON Server (for API mock server)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+To run the application locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone this repository.
+2. Install dependencies using `npm install`.
+3. Run the JSON Server to serve the API using the following command:
+   `npx json-server --watch db.json --port 3001`
 
-### `npm run build`
+4. Start the React application using `npm start`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API Endpoints
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Forms**
+- `GET /forms`: Get all forms
+- `GET /forms/:id`: Get a specific form
+- `POST /forms`: Create a new form
+- `PUT /forms/:id`: Update an existing form
+- `DELETE /forms/:id`: Delete a form
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Data Entries**
+- `GET /data?formId=:formId`: Get data entries for a specific form
+- `GET /data/:id`: Get a specific data entry
+- `POST /data`: Create a new data entry
+- `PUT /data/:id`: Update an existing data entry
+- `DELETE /data/:id`: Delete a data entry
 
-### `npm run eject`
+## Developer Information
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project was developed by Rakshith Raj Gurupura Puttaraju as part of his technical interview for an internship as a Frontend Developer at Nasdaq. You can reach out to Rakshith via email at rakshithraj.gp11@gmail.com
